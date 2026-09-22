@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bella Studio | Agendamento</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <a href="#inicio" class="logo">
+                Bella <span>Studio</span>
+            </a>
+
+            <nav class="nav">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#agendamento">Agendar</a>
+            </nav>
+
+            <a href="#agendamento" class="btn btn-primary">
+                Agendar horário
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        ✦ Beleza & Bem-estar
+                    </span>
+
+                    <h1>
+                        Seu momento de
+                        <span>cuidado</span>
+                        começa aqui.
+                    </h1>
+
+                    <p>
+                        Cuide de você com quem entende de beleza.
+                        Escolha o serviço, o profissional e o melhor
+                        horário para o seu dia.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#agendamento" class="btn btn-primary">
+                            Agendar meu horário
+                        </a>
+
+                        <a href="#servicos" class="btn btn-outline">
+                            Ver serviços
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <span>Imagem do salão</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVIÇOS
+        ========================== -->
+
+        <section class="services section" id="servicos">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="eyebrow">Nossos serviços</span>
+
+                    <h2>
+                        Tudo para você se sentir
+                        <span>ainda mais especial.</span>
+                    </h2>
+
+                    <p>
+                        Escolha o serviço que deseja realizar
+                        e encontre o melhor horário para você.
+                    </p>
+
+                </div>
+
+                <!--
+                    Os cards são carregados automaticamente
+                    pelo JavaScript através da API.
+                -->
+                <div class="services-grid" id="services-grid">
+                    <!-- Serviços carregados pelo JavaScript -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+
+        <section class="about section" id="sobre">
+
+            <div class="container about-content">
+
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span>Imagem do salão</span>
+                    </div>
+                </div>
+
+                <div class="about-text">
+
+                    <span class="eyebrow">Sobre nós</span>
+
+                    <h2>
+                        Um espaço pensado
+                        <span>para você.</span>
+                    </h2>
+
+                    <p>
+                        No Bella Studio, acreditamos que cuidar
+                        da beleza também é uma forma de cuidar
+                        de si.
+                    </p>
+
+                    <p>
+                        Nosso espaço foi criado para oferecer uma
+                        experiência tranquila, acolhedora e
+                        personalizada para cada cliente.
+                    </p>
+
+                    <div class="about-stats">
+
+                        <div>
+                            <strong>5+</strong>
+                            <span>Anos de experiência</span>
+                        </div>
+
+                        <div>
+                            <strong>2k+</strong>
+                            <span>Clientes atendidas</span>
+                        </div>
+
+                        <div>
+                            <strong>4</strong>
+                            <span>Especialistas</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COMO FUNCIONA
+        ========================== -->
+
+        <section class="how section">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="eyebrow">Simples e rápido</span>
+                    <h2>Agende em poucos passos.</h2>
+                </div>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <h3>Escolha o serviço</h3>
+                        <p>Encontre o serviço que deseja realizar.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <h3>Escolha o horário</h3>
+                        <p>
+                            Consulte os horários disponíveis
+                            e escolha o melhor para você.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <h3>Confirme</h3>
+                        <p>
+                            Escolha o profissional, informe seus
+                            dados e confirme.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             AGENDAMENTO
+        ========================== -->
+
+        <section class="booking section" id="agendamento">
+
+            <div class="container">
+
+                <div class="booking-box" id="booking-box">
+
+                    <div class="booking-header">
+                        <span class="eyebrow">Agendamento</span>
+                        <h2>Reserve seu horário</h2>
+                        <p>
+                            Escolha o serviço, o horário e o
+                            profissional. É rápido.
+                        </p>
+                    </div>
+
+                    <!-- RESUMO DO SERVIÇO -->
+                    <div class="svc-summary" id="svc-summary" data-empty="true">
+
+                        <div class="svc-summary-info">
+                            <span class="svc-summary-label">Serviço</span>
+                            <strong id="svc-summary-name">
+                                Selecione um serviço
+                            </strong>
+                        </div>
+
+                        <div class="svc-summary-right">
+                            <span class="svc-summary-price" id="svc-summary-price"></span>
+                            <button
+                                type="button"
+                                class="svc-change"
+                                id="svc-change"
+                                hidden
+                            >
+                                Trocar
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- ESTADO VAZIO -->
+                    <p class="booking-empty" id="booking-empty">
+                        Escolha um serviço na seção
+                        <a href="#servicos">Serviços</a>
+                        para ver os horários disponíveis.
+                    </p>
+
+                    <!-- PASSO 1: DIA + HORÁRIO -->
+                    <div class="booking-step" id="step-datetime" hidden>
+
+                        <h3 class="step-title">
+                            <span class="step-badge">1</span>
+                            Escolha o dia e o horário
+                        </h3>
+
+                        <div class="day-strip-wrap">
+                            <button
+                                type="button"
+                                class="day-nav"
+                                id="day-prev"
+                                aria-label="Dias anteriores"
+                            >‹</button>
+
+                            <div class="day-strip" id="day-strip"></div>
+
+                            <button
+                                type="button"
+                                class="day-nav"
+                                id="day-next"
+                                aria-label="Próximos dias"
+                            >›</button>
+                        </div>
+
+                        <div class="slots" id="slots"></div>
+
+                        <p class="slots-message" id="slots-message"></p>
+
+                    </div>
+
+                    <!-- PASSO 2: PROFISSIONAL -->
+                    <div class="booking-step" id="step-professional" hidden>
+
+                        <h3 class="step-title">
+                            <span class="step-badge">2</span>
+                            Escolha o profissional
+                        </h3>
+
+                        <div class="prof-list" id="prof-list"></div>
+
+                    </div>
+
+                    <!-- PASSO 3: DADOS -->
+                    <div class="booking-step" id="step-details" hidden>
+
+                        <h3 class="step-title">
+                            <span class="step-badge">3</span>
+                            Seus dados
+                        </h3>
+
+                        <div class="booking-resume" id="booking-resume"></div>
+
+                        <form class="booking-form" id="booking-form">
+
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Seu nome completo"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">WhatsApp</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="(00) 00000-0000"
+                                    autocomplete="tel"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="email">
+                                    E-mail <span>(opcional)</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="seuemail@email.com"
+                                    autocomplete="email"
+                                >
+                            </div>
+
+                            <div class="form-submit full">
+                                <button type="submit" class="btn btn-primary">
+                                    Confirmar agendamento
+                                </button>
+                                <small>
+                                    Você não precisa criar uma conta
+                                    para agendar.
+                                </small>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <a href="#inicio" class="logo">
+                    Bella <span>Studio</span>
+                </a>
+                <p>Beleza, cuidado e bem-estar.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#agendamento">Agendar</a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 Bella Studio. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
