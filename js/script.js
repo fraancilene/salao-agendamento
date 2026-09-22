@@ -9,10 +9,8 @@ const API_URL = LOCAL ? "http://localhost:3000/api" : "/api";
 
 const servicesGrid = document.querySelector("#services-grid");
 
-const svcSummary = document.querySelector("#svc-summary");
-const svcName = document.querySelector("#svc-summary-name");
+const serviceSelect = document.querySelector("#service-select");
 const svcPrice = document.querySelector("#svc-summary-price");
-const svcChange = document.querySelector("#svc-change");
 const bookingEmpty = document.querySelector("#booking-empty");
 
 const stepDatetime = document.querySelector("#step-datetime");
@@ -58,6 +56,9 @@ const state = {
     professional: null,   // id numérico | "sem"
     professionalName: ""
 };
+
+// Serviços indexados por id (para o seletor do agendamento)
+let servicesById = {};
 
 // ==============================
 // HELPERS
@@ -105,6 +106,19 @@ async function loadServices() {
         const services = await response.json();
 
         servicesGrid.innerHTML = "";
+
+        // Popula o seletor de serviço dentro do agendamento
+        servicesById = {};
+        serviceSelect.innerHTML =
+            '<option value="">Selecione um serviço</option>';
+
+        services.forEach(s => {
+            servicesById[s.id] = s;
+            const opt = document.createElement("option");
+            opt.value = s.id;
+            opt.textContent = s.nome;
+            serviceSelect.appendChild(opt);
+        });
 
         services.forEach(service => {
             const card = document.createElement("a");
@@ -176,10 +190,10 @@ async function selectService(service) {
     state.professional = null;
     state.professionalName = "";
 
-    svcSummary.dataset.empty = "false";
-    svcName.textContent = service.nome;
+    if (serviceSelect.value !== String(service.id)) {
+        serviceSelect.value = String(service.id);
+    }
     svcPrice.textContent = formatBRL(service.preco);
-    svcChange.hidden = false;
 
     bookingEmpty.hidden = true;
     stepDatetime.hidden = false;
@@ -536,15 +550,33 @@ function renderResume() {
 }
 
 // ==============================
-// TROCAR SERVIÇO
+// SELETOR DE SERVIÇO (no agendamento)
 // ==============================
 
-if (svcChange) {
-    svcChange.addEventListener("click", () => {
-        document
-            .querySelector("#servicos")
-            .scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+serviceSelect.addEventListener("change", () => {
+    const id = serviceSelect.value;
+
+    if (!id) {
+        resetToNoService();
+        return;
+    }
+
+    selectService(servicesById[id]);
+});
+
+function resetToNoService() {
+    state.service = null;
+    state.date = null;
+    state.time = null;
+    state.slotProfs = [];
+    state.professional = null;
+
+    svcPrice.textContent = "";
+    bookingEmpty.hidden = false;
+
+    stepDatetime.hidden = true;
+    stepProfessional.hidden = true;
+    stepDetails.hidden = true;
 }
 
 // ==============================

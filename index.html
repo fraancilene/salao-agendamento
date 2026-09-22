@@ -267,35 +267,29 @@
                         </p>
                     </div>
 
-                    <!-- RESUMO DO SERVIÇO -->
-                    <div class="svc-summary" id="svc-summary" data-empty="true">
+                    <!-- SELETOR DE SERVIÇO -->
+                    <div class="svc-summary" id="svc-summary">
 
                         <div class="svc-summary-info">
-                            <span class="svc-summary-label">Serviço</span>
-                            <strong id="svc-summary-name">
-                                Selecione um serviço
-                            </strong>
+                            <label class="svc-summary-label" for="service-select">
+                                Serviço
+                            </label>
+                            <select id="service-select" class="svc-select">
+                                <option value="">Selecione um serviço</option>
+                            </select>
                         </div>
 
                         <div class="svc-summary-right">
                             <span class="svc-summary-price" id="svc-summary-price"></span>
-                            <button
-                                type="button"
-                                class="svc-change"
-                                id="svc-change"
-                                hidden
-                            >
-                                Trocar
-                            </button>
                         </div>
 
                     </div>
 
                     <!-- ESTADO VAZIO -->
                     <p class="booking-empty" id="booking-empty">
-                        Escolha um serviço na seção
-                        <a href="#servicos">Serviços</a>
-                        para ver os horários disponíveis.
+                        Escolha um serviço no seletor acima — ou clique num card
+                        na seção <a href="#servicos">Serviços</a> — para ver os
+                        horários disponíveis.
                     </p>
 
                     <!-- PASSO 1: DIA + HORÁRIO -->
