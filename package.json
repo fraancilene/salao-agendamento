@@ -1,0 +1,15 @@
+{
+  "name": "salao-agendamento",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bella Studio — agendamento (front estático + API serverless na Vercel)",
+  "scripts": {
+    "dev": "node backend/src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  }
+}

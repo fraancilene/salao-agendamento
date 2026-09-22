@@ -1,4 +1,7 @@
-const API_URL = "http://localhost:3000/api";
+// Em produção (Vercel) o back roda no mesmo domínio, em /api.
+// Em desenvolvimento local usamos o servidor Express na porta 3000.
+const LOCAL = ["localhost", "127.0.0.1", ""].includes(location.hostname);
+const API_URL = LOCAL ? "http://localhost:3000/api" : "/api";
 
 // ==============================
 // ELEMENTOS DO DOM
